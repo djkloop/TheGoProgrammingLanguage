@@ -52,6 +52,17 @@ func main() {
 	var errs error
 	x, y := 1, 2
 	x, y = y, x // must type is same
+
+	// 函数也可以用短变量来接收
+	f2, err := os.Open("i wile err")
+	if err != nil {
+		fmt.Println(f2, err)
+	}
+	defer f2.Close()
+
+
+
+
 	fmt.Println(boiling, names, errs, x, y, ih)
 	fmt.Println(anim, freq, t) // ...只为不报错
 }
