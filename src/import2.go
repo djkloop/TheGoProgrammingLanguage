@@ -4,7 +4,6 @@ import (
 	f "fmt"
 	_ "test"
 	. "time"
-	T "test"
 )
 
 func main() {
@@ -18,5 +17,4 @@ func main() {
 	*/
 	f.Println("oh i am fmt") // 别名
 	f.Println(Now().Format("2006-01-02")) // .操作符
-	T.Test()
 }

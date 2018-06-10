@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	/*
 		Go语言 变量与常量
@@ -37,11 +39,39 @@ func main() {
 		Go  常量
 
 	1. 常量定义也可区分为显式和隐式
+	2. 常量可以使用内置表达式定义
+	3.常量范围目前只支持布尔，数字，字符串
 	*/
 
 	// 显式
 	// const identifier [type] = value
+	const name string = "djkloop"
+	fmt.Print(name)
 
 	// 隐式
 	// const identifier = value (无类型常量)
+	const nName = "djkloop"
+	fmt.Println("\n", nName)
+
+	// 组合常量
+	const (
+		cat string = "🐱"
+		dog        = "🐶"
+	)
+
+	fmt.Println("\n")
+	fmt.Println(cat)
+	fmt.Println("\n")
+	fmt.Println(dog)
+
+	const apple, banner string = "🍎", "🍌"
+	fmt.Println(apple, banner)
+
+	const a, c, intNumber, testBool = "🍊", "🌰", 1, true
+	fmt.Println(a, c, intNumber, testBool)
+
+	const aLen = len("string")
+	fmt.Println(aLen)
+
 }
+
